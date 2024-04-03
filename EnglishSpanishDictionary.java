@@ -7,8 +7,9 @@ public class EnglishSpanishDictionary {
     private BinaryTree<Association<String, String>> dictionary;
 
     public EnglishSpanishDictionary() {
-        dictionary = new BinaryTree<>();
+        dictionary = new BinaryTree<Association<String, String>>();
     }
+
 
     // Método para construir el diccionario a partir de un archivo
     public void buildDictionaryFromFile(String filename) {
