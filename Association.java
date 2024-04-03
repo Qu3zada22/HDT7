@@ -1,4 +1,4 @@
-// Clase para representar una asociación de llave-valor en el diccionario
+
 class Association<K extends Comparable<K>, V> implements Comparable<Association<K, V>> {
     private K key;
     private V value;
@@ -18,6 +18,9 @@ class Association<K extends Comparable<K>, V> implements Comparable<Association<
 
     @Override
     public int compareTo(Association<K, V> other) {
+        if (other == null) {
+            return -1; // Si other es null, consideramos que este objeto es menor
+        }
         return this.key.compareTo(other.getKey());
     }
 }
